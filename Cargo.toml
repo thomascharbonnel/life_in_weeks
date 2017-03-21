@@ -1,0 +1,8 @@
+[package]
+
+name = "life_in_weeks"
+version = "0.0.1"
+authors = [ "Thomas Charbonnel <thomas@charbonnel.email>" ]
+
+[dependencies]
+iron = "0.4.*"
