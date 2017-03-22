@@ -1,0 +1,65 @@
+doctype html
+html
+  head
+    css:
+      table#years td {
+        height: 10px;
+        width: 10px;
+      }
+
+      table#weeks td {
+        height: 2px;
+        width: 2px;
+      }
+
+      td {
+        border: 1px solid black;
+      }
+
+      td.black {
+        background-color: black;
+      }
+  body
+    h1 On the Shortness of Life
+
+    h2 Life in Years
+
+    table#years
+      tbody
+        - 8.times do |i|
+          - if i < @decades
+            tr
+              - 10.times do
+                td.black
+          - elsif i == @decades
+            tr
+              - 10.times do |j|
+                - if j < @years
+                  td.black
+                - else
+                  td
+          - else
+            tr
+              - 10.times do
+                td
+
+    h2 Life in Weeks
+
+    table#weeks
+      tbody
+        - 80.times do |i|
+          - if i < @weeks_col
+            tr
+              - 52.times do
+                td.black
+          - elsif i == @weeks_col
+            tr
+              - 52.times do |j|
+                - if j < @weeks_row
+                  td.black
+                - else
+                  td
+          - else
+            tr
+              - 52.times do
+                td
